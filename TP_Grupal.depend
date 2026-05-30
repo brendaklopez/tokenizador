@@ -1,0 +1,29 @@
+# depslib dependency file v1.0
+1779472733 source:c:\undav\modelos_parcial1\tp_grupal\alphabettestsuite.cpp
+	"AlphabetTestSuite.h"
+	"Alphabet.h"
+	<iostream>
+
+1779472654 c:\undav\modelos_parcial1\tp_grupal\alphabettestsuite.h
+
+1779472091 c:\undav\modelos_parcial1\tp_grupal\alphabet.h
+
+1779848249 source:c:\undav\modelos_parcial1\tp_grupal\dictionary.cpp
+	"Dictionary.h"
+	<iostream>
+
+1780023604 source:c:\undav\modelos_parcial1\tp_grupal\main.cpp
+	<iostream>
+	"AlphabetTestSuite.h"
+
+1779472532 source:c:\undav\modelos_parcial1\tp_grupal\ocurrencecounter.cpp
+
+1780023558 source:c:\undav\modelos_parcial1\tp_grupal\alphabet.cpp
+	"Alphabet.h"
+	<iostream>
+	"Dictionary.h"
+
+1779472424 c:\undav\modelos_parcial1\tp_grupal\dictionary.h
+
+1779474833 source:c:\undav\modelos_parcial1\tp_grupal\ocurrencecountertestsuite.cpp
+
