@@ -16,12 +16,18 @@ int Longitud(const char* texto){
     }
     return i;
 }
+//Funcion privada
+UndavAlphabet::Alphabet* CrearAlphabetVacio(){
+    UndavAlphabet::Alphabet* alfabeto = new UndavAlphabet::Alphabet;
 
-UndavAlphabet::Alphabet* UndavAlphabet::CreateAlphabet(const char* printableChars){
-    Alphabet* alfabeto = new Alphabet;
     alfabeto->caracteres = new char[128];
     alfabeto->cantCaracteres = 0;
     alfabeto->indices = UndavDictionary::CreateDictionary();
+
+    return alfabeto;
+}
+UndavAlphabet::Alphabet* UndavAlphabet::CreateAlphabet(const char* printableChars){
+    Alphabet* alfabeto = CrearAlphabetVacio();
 
     for(int i = 0; printableChars[i] != '\0'; i++){
         char c = printableChars[i];
@@ -47,11 +53,7 @@ UndavAlphabet::Alphabet* UndavAlphabet::CreateAlphabet(
     int startOffset,
     int endOffset
 ){
-    Alphabet* alfabeto = new Alphabet;
-
-    alfabeto->caracteres = new char[128];
-    alfabeto->cantCaracteres = 0;
-    alfabeto->indices = UndavDictionary::CreateDictionary();
+    Alphabet* alfabeto = CrearAlphabetVacio();
 
     // Espacios reservados al inicio
     for(int i = 0; i < startOffset; i++){
