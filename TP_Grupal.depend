@@ -12,18 +12,29 @@
 	"Dictionary.h"
 	<iostream>
 
-1780023604 source:c:\undav\modelos_parcial1\tp_grupal\main.cpp
+1780618563 source:c:\undav\modelos_parcial1\tp_grupal\main.cpp
 	<iostream>
 	"AlphabetTestSuite.h"
+	"OcurrenceCounterTestSuite.h"
 
-1779472532 source:c:\undav\modelos_parcial1\tp_grupal\ocurrencecounter.cpp
+1780580414 source:c:\undav\modelos_parcial1\tp_grupal\ocurrencecounter.cpp
+	"OcurrenceCounter.h"
 
-1780023558 source:c:\undav\modelos_parcial1\tp_grupal\alphabet.cpp
+1780104973 source:c:\undav\modelos_parcial1\tp_grupal\alphabet.cpp
 	"Alphabet.h"
 	<iostream>
 	"Dictionary.h"
 
 1779472424 c:\undav\modelos_parcial1\tp_grupal\dictionary.h
 
-1779474833 source:c:\undav\modelos_parcial1\tp_grupal\ocurrencecountertestsuite.cpp
+1780626439 source:c:\undav\modelos_parcial1\tp_grupal\ocurrencecountertestsuite.cpp
+	"OcurrenceCounterTestSuite.h"
+	"OcurrenceCounter.h"
+	"Alphabet.h"
+	<iostream>
+
+1780598289 c:\undav\modelos_parcial1\tp_grupal\ocurrencecountertestsuite.h
+
+1779472575 c:\undav\modelos_parcial1\tp_grupal\ocurrencecounter.h
+	"Alphabet.h"
 

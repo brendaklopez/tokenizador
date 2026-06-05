@@ -1,8 +1,12 @@
 #include <iostream>
 #include "AlphabetTestSuite.h"
+#include "OcurrenceCounterTestSuite.h"
 
 int main()
 {
     AlphabetTestSuite::RunAlphabetTestSuite();
-   return 0;
+    OcurrenceCounterTestSuite::RunOcurrenceCounterTestSuite();
+
+    return 0;
 }
+
