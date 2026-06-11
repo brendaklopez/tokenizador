@@ -1,46 +1,50 @@
 #include "Dictionary.h"
 #include <iostream>
-
-
 namespace UndavDictionary {
-
 	struct DictionaryItem{
-	Key key;
-	Value value;
-	DictionaryItem* siguiente;
+        Key key;
+        Value value;
+        DictionaryItem* siguiente;
 	};
-
 	struct Dictionary{
 	    DictionaryItem* primero;
 	    int cantidadItems;
-	};;
-
-	// Precondicion: Ninguna
-	// Postcondicion: Devuelve un diccionario vacio listo para ser utilizado
+	};
 	Dictionary* CreateDictionary(){
 	    Dictionary* diccionario = new Dictionary;
 	    diccionario->primero = NULL;
 	    diccionario->cantidadItems = 0;
         return diccionario;
 	};
-
+	/*
+	// Postcondicion: Devuelve la posicion donde esta key en el diccionario. Si no existe devuelve la posicion donde deberia estar si existiria;
+	int Ranking(const Dictionary* diccionario, Key key ){
+	//Aca haceer el algoritmo de busqeuda binaria
+	}*/
 	DictionaryItem* BuscarItem(const Dictionary* diccionario, Key key){
-	DictionaryItem* actual = diccionario->primero; //porque empieza a busacr desde el primero
-	DictionaryItem* encontrado = NULL;
-
-	while(encontrado == NULL && actual != NULL){
-	    if (actual->key == key){
-            encontrado = actual;
-	    }
-	    actual = actual->siguiente;
+        DictionaryItem* actual = diccionario->primero; //porque empieza a busacr desde el primero
+        DictionaryItem* encontrado = NULL;
+        while(encontrado == NULL && actual != NULL){
+            if (actual->key == key){
+                encontrado = actual;
+            }
+            actual = actual->siguiente;
+        }
+        return encontrado;
 	}
-	return encontrado;
-	}
-
-	// Precondicion: @ditionary es una instancia valida creada con CreateDictionary
-	// Postcondicion: Si @key no existe agrega el par de elementos @key @value (@value asociado a @key)
-	// Si ya existe @key, actualiza el valor a asociado con @value
 	void Add(Dictionary* dictionary, Key key, Value value){
+	    int posicion = Ranking(diccionario, key);
+	    if(dictionary->primero[posicion]->key == key){
+            dictionary->primero[posicion]->value = value;
+        }
+        else{
+            // Chequear si tengo que redimensionar
+
+            // Correr el vector desde posicion hacia la derecha
+            dictionary->primero[posicion]->key = key;
+            dictionary->primero[posicion]->value = value;
+
+        }
 	    DictionaryItem* item = BuscarItem(dictionary, key);
 	    if (item != NULL) {
             item->value = value;
@@ -56,15 +60,11 @@ namespace UndavDictionary {
         }
 	};
 
-	// Precondicion: @dictionary es una instancia valida y @key esta en el @dictionary
-	// Postcondicion: Devuelve el valor asociado a @key
 	Value Get(const Dictionary* dictionary, Key key){
 	    DictionaryItem* encontrado = BuscarItem(dictionary, key);
 	    return encontrado->value;
 	};
 
-	// Precondicion: @dictionary es una instancia valida
-	// Postcondicion: Devuelve true si @key se encuentra en @diccionary
 	bool Contains(const Dictionary* dictionary, Key key){
 	    bool contiene = false;
         DictionaryItem* encontrado = BuscarItem(dictionary, key);
@@ -73,9 +73,6 @@ namespace UndavDictionary {
             }
 	    return contiene;
 	};
-
-	// Precondicion: @dictionary es una instancia valida
-	// Postcondicion: Devuelve la cantidad de entradas (Keys) del @dictionary
 	int Size(const Dictionary* dictionary){
 	    return dictionary->cantidadItems;
 	};
@@ -84,18 +81,14 @@ namespace UndavDictionary {
 		struct DictionaryIterator{
 		    DictionaryItem* itemActual;
 		};
-		// Precondicion: @diccionary es una intancia valida
-		// Postcondicion: Devuelve un iterador nuevo apuntando a la primera entrada
 		DictionaryIterator* CreateIterator(Dictionary* dictionary){
-		     DictionaryIterator* iterator = new DictionaryIterator;
+            DictionaryIterator* iterator = new DictionaryIterator;
 
             iterator->itemActual = dictionary->primero;
 
             return iterator;
 		};
 
-		// Precondicion: @iterador es una instancia valida creada con CreateIterator
-		// Postcondicion: Devuelve true si @iterador ya no apunta a ninguna entrada. Caso contrario devuelve false
 		bool IsEnd(DictionaryIterator* iterator){
 		    return iterator->itemActual == NULL;
 

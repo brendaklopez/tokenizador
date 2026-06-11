@@ -1,25 +1,15 @@
-
 #include "OcurrenceCounter.h"
 using UndavAlphabet::Alphabet;
-
-
 namespace UndavOcurrenceCounter {
-
     struct OcurrenceCounter {
         Alphabet* alphabet;
         int* ocurrencias;
     };
-
     OcurrenceCounter* Create(Alphabet* alphabet, char* text) {
-
         OcurrenceCounter* counter = new OcurrenceCounter;
-
         counter->alphabet = alphabet;
-
         int cantidadSimbolos = UndavAlphabet::Radix(alphabet);
-
         counter->ocurrencias = new int[cantidadSimbolos];
-
         // Inicializar el vector en 0
         for(int i = 0; i < cantidadSimbolos; i++){
             counter->ocurrencias[i] = 0;
@@ -56,10 +46,8 @@ namespace UndavOcurrenceCounter {
     }
 
     void DestroyOcurrenceCounter(OcurrenceCounter* counter) {
-
         delete[] counter->ocurrencias;
-
+        UndavAlphabet::DestroyAlphabet(counter->alphabet);
         delete counter;
     }
-
 }
