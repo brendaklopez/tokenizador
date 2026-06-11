@@ -6,7 +6,10 @@ struct UndavAlphabet::Alphabet{
     int cantCaracteres;
     UndavDictionary::Dictionary* indices;
 };
+<<<<<<< HEAD
 // Funcion auxiliar para calcular longitud de un texto
+=======
+>>>>>>> de8404f18877e2ce58efe18d148bbeab679c643e
 int Longitud(const char* texto){
     int i = 0;
     while(texto[i] != '\0'){
@@ -14,13 +17,15 @@ int Longitud(const char* texto){
     }
     return i;
 }
-//Funcion privada
-UndavAlphabet::Alphabet* CrearAlphabetVacio(){
+UndavAlphabet::Alphabet* UndavAlphabet::CreateAlphabet(const char* printableChars){
+    return CreateAlphabet(printableChars, 0, 0);
+}
+UndavAlphabet::Alphabet* UndavAlphabet::CreateAlphabet(const char* printableChars, int startOffset, int endOffset){
     UndavAlphabet::Alphabet* alfabeto = new UndavAlphabet::Alphabet;
-
     alfabeto->caracteres = new char[128];
     alfabeto->cantCaracteres = 0;
     alfabeto->indices = UndavDictionary::CreateDictionary();
+<<<<<<< HEAD
     return alfabeto;
 }
 UndavAlphabet::Alphabet* UndavAlphabet::CreateAlphabet(const char* printableChars){
@@ -46,12 +51,18 @@ UndavAlphabet::Alphabet* UndavAlphabet::CreateAlphabet(
     int endOffset
 ){
     Alphabet* alfabeto = CrearAlphabetVacio();
+=======
+>>>>>>> de8404f18877e2ce58efe18d148bbeab679c643e
     // Espacios reservados al inicio
     for(int i = 0; i < startOffset; i++){
         alfabeto->caracteres[alfabeto->cantCaracteres] = '\0';
         alfabeto->cantCaracteres++;
     }
+<<<<<<< HEAD
     // Agregar caracteres unicos
+=======
+    // Agregar caracteres únicos
+>>>>>>> de8404f18877e2ce58efe18d148bbeab679c643e
     for(int i = 0; printableChars[i] != '\0'; i++){
         char c = printableChars[i];
         if(!UndavDictionary::Contains(alfabeto->indices, c)){
@@ -79,18 +90,14 @@ char UndavAlphabet::ToChar(const Alphabet* alphabet, int index){
 }
 int UndavAlphabet::ToIndex(const Alphabet* alphabet, char c){
     if(UndavDictionary::Contains(alphabet->indices, c)){
-
         return UndavDictionary::Get(alphabet->indices, c);
     }
-
     return -1;
 }
 bool UndavAlphabet::Contains(const Alphabet* alphabet, char c){
-
     return UndavDictionary::Contains(alphabet->indices, c);
 }
 int UndavAlphabet::Radix(const Alphabet* alphabet){
-
     return alphabet->cantCaracteres;
 }
 int* UndavAlphabet::ToIndices(

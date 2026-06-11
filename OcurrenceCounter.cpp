@@ -38,6 +38,13 @@ namespace UndavOcurrenceCounter {
     }
     void DestroyOcurrenceCounter(OcurrenceCounter* counter) {
         delete[] counter->ocurrencias;
+<<<<<<< HEAD
         delete counter;
     }
 }
+=======
+        UndavAlphabet::DestroyAlphabet(counter->alphabet);
+        delete counter;
+    }
+}
+>>>>>>> de8404f18877e2ce58efe18d148bbeab679c643e

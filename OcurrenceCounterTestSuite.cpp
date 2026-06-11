@@ -2,17 +2,14 @@
 #include "OcurrenceCounter.h"
 #include "Alphabet.h"
 #include <iostream>
-
 using namespace UndavAlphabet;
 using namespace UndavOcurrenceCounter;
 using namespace std;
-
 void TestOcurrenceCounterBinaryAlphabet();
 void TestOcurrenceCounterDNAAlphabet();
 void TestOcurrenceCounterBase64Alphabet();
 void TestOcurrenceCounterASCIIAlphabet();
 void TestOcurrenceCounterAbracadabra();
-
 void OcurrenceCounterTestSuite::RunOcurrenceCounterTestSuite() {
 	cout << "Running OcurrenceCounterTestSuite..." << endl;
 	TestOcurrenceCounterBinaryAlphabet();
@@ -23,7 +20,6 @@ void OcurrenceCounterTestSuite::RunOcurrenceCounterTestSuite() {
 	cout << "OcurrenceCounterTestSuite completed" << endl;
 }
 
-
 void TestOcurrenceCounterBinaryAlphabet() {
 	char expectedTable[] = "01";//Simbolos del sistema binario
 	Alphabet* alphabet = CreateAlphabet(expectedTable);
@@ -31,10 +27,7 @@ void TestOcurrenceCounterBinaryAlphabet() {
 	OcurrenceCounter* ocurrencia =  Create(alphabet, texto);
     int cantCeros = CountOcurrence(ocurrencia, '0');
     int cantUnos = CountOcurrence(ocurrencia, '1');
-
     DestroyOcurrenceCounter(ocurrencia);
-    DestroyAlphabet(alphabet);
-
 	if (cantCeros == 6 && cantUnos == 8) {
 		cout << "TestOcurrenceCounterBinaryAlphabet: OK" << endl;
 	}
@@ -54,7 +47,6 @@ void TestOcurrenceCounterDNAAlphabet() {
     int cantT = CountOcurrence(ocurrencia, 'T');
 
     DestroyOcurrenceCounter(ocurrencia);
-    DestroyAlphabet(alphabet);
 
 	if (cantA == 4 && cantG == 1 && cantT == 5) {
 		cout << "TestOcurrenceCounterDNAAlphabet: OK" << endl;
@@ -73,7 +65,6 @@ void TestOcurrenceCounterBase64Alphabet() {
     int cantA = CountOcurrence(ocurrencia, 'a');
     int cantMas = CountOcurrence(ocurrencia, '+');
     DestroyOcurrenceCounter(ocurrencia);
-    DestroyAlphabet(alphabet);
 
 	if ( cantA == 13 && cantMas == 3) {
 		cout << "TestOcurrenceCounterBase64Alphabet: OK" << endl;
