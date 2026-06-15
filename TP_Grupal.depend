@@ -8,7 +8,7 @@
 
 1779472091 c:\undav\modelos_parcial1\tp_grupal\alphabet.h
 
-1780023646 source:c:\undav\modelos_parcial1\tp_grupal\dictionary.cpp
+1781559255 source:c:\undav\modelos_parcial1\tp_grupal\dictionary.cpp
 	"Dictionary.h"
 	<iostream>
 
@@ -17,7 +17,7 @@
 	"AlphabetTestSuite.h"
 	"OcurrenceCounterTestSuite.h"
 
-1781146583 source:c:\undav\modelos_parcial1\tp_grupal\ocurrencecounter.cpp
+1781367363 source:c:\undav\modelos_parcial1\tp_grupal\ocurrencecounter.cpp
 	"OcurrenceCounter.h"
 
 1781147955 source:c:\undav\modelos_parcial1\tp_grupal\alphabet.cpp
@@ -27,7 +27,7 @@
 
 1779472424 c:\undav\modelos_parcial1\tp_grupal\dictionary.h
 
-1781147913 source:c:\undav\modelos_parcial1\tp_grupal\ocurrencecountertestsuite.cpp
+1781156254 source:c:\undav\modelos_parcial1\tp_grupal\ocurrencecountertestsuite.cpp
 	"OcurrenceCounterTestSuite.h"
 	"OcurrenceCounter.h"
 	"Alphabet.h"

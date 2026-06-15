@@ -6,10 +6,7 @@ struct UndavAlphabet::Alphabet{
     int cantCaracteres;
     UndavDictionary::Dictionary* indices;
 };
-<<<<<<< HEAD
 // Funcion auxiliar para calcular longitud de un texto
-=======
->>>>>>> de8404f18877e2ce58efe18d148bbeab679c643e
 int Longitud(const char* texto){
     int i = 0;
     while(texto[i] != '\0'){
@@ -25,53 +22,17 @@ UndavAlphabet::Alphabet* UndavAlphabet::CreateAlphabet(const char* printableChar
     alfabeto->caracteres = new char[128];
     alfabeto->cantCaracteres = 0;
     alfabeto->indices = UndavDictionary::CreateDictionary();
-<<<<<<< HEAD
-    return alfabeto;
-}
-UndavAlphabet::Alphabet* UndavAlphabet::CreateAlphabet(const char* printableChars){
-    Alphabet* alfabeto = CrearAlphabetVacio();
-    for(int i = 0; printableChars[i] != '\0'; i++){
-        char c = printableChars[i];
-        // Evita duplicados
-        if(!UndavDictionary::Contains(alfabeto->indices, c)){
-            alfabeto->caracteres[alfabeto->cantCaracteres] = c;
-            UndavDictionary::Add(
-                alfabeto->indices,
-                c,
-                alfabeto->cantCaracteres
-            );
-            alfabeto->cantCaracteres++;
-        }
-    }
-    return alfabeto;
-}
-UndavAlphabet::Alphabet* UndavAlphabet::CreateAlphabet(
-    const char* printableChars,
-    int startOffset,
-    int endOffset
-){
-    Alphabet* alfabeto = CrearAlphabetVacio();
-=======
->>>>>>> de8404f18877e2ce58efe18d148bbeab679c643e
     // Espacios reservados al inicio
     for(int i = 0; i < startOffset; i++){
         alfabeto->caracteres[alfabeto->cantCaracteres] = '\0';
         alfabeto->cantCaracteres++;
     }
-<<<<<<< HEAD
     // Agregar caracteres unicos
-=======
-    // Agregar caracteres únicos
->>>>>>> de8404f18877e2ce58efe18d148bbeab679c643e
     for(int i = 0; printableChars[i] != '\0'; i++){
         char c = printableChars[i];
         if(!UndavDictionary::Contains(alfabeto->indices, c)){
             alfabeto->caracteres[alfabeto->cantCaracteres] = c;
-            UndavDictionary::Add(
-                alfabeto->indices,
-                c,
-                alfabeto->cantCaracteres
-            );
+            UndavDictionary::Add(alfabeto->indices, c, alfabeto->cantCaracteres);
             alfabeto->cantCaracteres++;
         }
     }
@@ -123,7 +84,6 @@ char* UndavAlphabet::ToText(
     texto[cantidadIndices] = '\0';
     return texto;
 }
-
 void UndavAlphabet::DestroyAlphabet(Alphabet* alphabet){
     delete[] alphabet->caracteres;
     UndavDictionary::DestroyDictionary(alphabet->indices);
