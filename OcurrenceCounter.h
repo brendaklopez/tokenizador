@@ -16,6 +16,12 @@ namespace UndavOcurrenceCounter {
 	// Precondicion: @counter es una instancia valida creada con Create.
 	// Postcondicion: Devuelve la cantidad de veces que aparece el caracter @symbol en el texto que contiene @counter
 	int CountOcurrence(OcurrenceCounter* counter, char symbol);
+    // Precondicion: @alphabet es una instancia valida. @word es una cadena de caracteres que es solo una palabra
+	// Postcondicion: Devuelve la cantidad de veces que @text contiene a la palabra @word
+	int CountOcurrence(OcurrenceCounter* counter, char* word);
+	// Precondicion: @alphabet es una instancia valida. @subText es una cadena de caracteres
+	// Postcondicion: Devuelve true si @text contiene a @subText
+	bool Contains(OcurrenceCounter* counter, char* subText);
 
 	// Precondicion: @counter es una instancia valida creada con Create.
 	// Postcondicion: Libera todos los recursos asociados de @counter

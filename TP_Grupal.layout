@@ -2,9 +2,44 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="OcurrenceCounterTestSuite.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="3" zoom_2="0">
+	<File name="Tries.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1558" topLine="0" />
+			<Cursor1 position="1106" topLine="18" />
+		</Cursor>
+	</File>
+	<File name="Dictionary.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2557" topLine="28" />
+		</Cursor>
+	</File>
+	<File name="Alphabet.cpp" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="2" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1840" topLine="39" />
+		</Cursor>
+	</File>
+	<File name="OcurrenceCounter.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="2" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="14" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="AlphabetTestSuite.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1057" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="OcurrenceCounterTestSuite.cpp" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="3" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1558" topLine="79" />
+		</Cursor>
+	</File>
+	<File name="Dictionary.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="71" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="AlphabetTestSuite.h" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="81" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="main.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="3" zoom_2="0">
@@ -12,44 +47,19 @@
 			<Cursor1 position="244" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="OcurrenceCounter.cpp" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="2" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1394" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="OcurrenceCounterTestSuite.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="OcurrenceCounterTestSuite.h" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="95" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="Dictionary.h" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="Tries.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1152" topLine="0" />
+			<Cursor1 position="442" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="Dictionary.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
+	<File name="OcurrenceCounter.cpp" open="1" top="1" tabpos="2" split="0" active="1" splitpos="0" zoom_1="2" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="926" topLine="21" />
-		</Cursor>
-	</File>
-	<File name="AlphabetTestSuite.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="81" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="AlphabetTestSuite.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1057" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="OcurrenceCounter.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="2" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="156" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="Alphabet.cpp" open="1" top="1" tabpos="2" split="0" active="1" splitpos="0" zoom_1="2" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="407" topLine="0" />
+			<Cursor1 position="586" topLine="0" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

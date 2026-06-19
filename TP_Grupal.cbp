@@ -41,6 +41,8 @@
 		<Unit filename="OcurrenceCounter.h" />
 		<Unit filename="OcurrenceCounterTestSuite.cpp" />
 		<Unit filename="OcurrenceCounterTestSuite.h" />
+		<Unit filename="Tries.cpp" />
+		<Unit filename="Tries.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
