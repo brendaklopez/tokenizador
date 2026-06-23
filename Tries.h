@@ -10,9 +10,9 @@ namespace UndavTrie {
     // Precondicion: @Trie es una instancia valida. @text es una cadena de caracteres
     //Postcondicion: Agrega @word al @trie
 	void Add(Trie* trie, char* word);
-    // Precondicion: @trie es una instancia valida. @Text es una cadena de caracteres
-	// Postcondicion: Devuelve la cantidad de veces que @Textfue agregada a @trie
-	int CountText(Trie* trie, char* word);
+    // Precondicion: @trie es una instancia valida. @word es una cadena de caracteres
+	// Postcondicion: Devuelve la cantidad de veces que @word fue agregada a @trie
+	int CountWord(Trie* trie, char* word);
     // Precondicion: @trie es una instancia valida
 	// Postcondicion: Libera todos los recursos asociados de @trie
 	void DestroyTrie(Trie* trie);
